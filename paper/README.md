@@ -161,65 +161,6 @@ wb.save(excel_save_path)
 This is all the process used for us to download and process the data.
 ## further analysis
 
+......
 
 
-
-import  pandas  as  pd
-excel_file_path  =  r'D:\desktop\brithdayWeb\data\all.xlsx'
-df  =  pd.read_excel(excel_file_path)
-student_names  =  df.iloc[:, 1]
-class_names  =  df.iloc[:, 2]
-
-
-
-import  pandas  as  pd
-
-import  matplotlib.pyplot  as  plt
-
-from  natsort  import  natsorted
-
-  
-
-# 更新Excel文件路径
-
-excel_file_path  =  r'D:\desktop\brithdayWeb\data\all.xlsx'
-
-  
-
-# 使用pandas的read_excel函数读取Excel文件
-
-df  =  pd.read_excel(excel_file_path)
-
-  
-
-# 读取学生名字和班级的数据
-
-student_names  =  df.iloc[:, 1]
-
-class_names  =  df.iloc[:, 2]
-
-  
-
-# 将学生名字和班级数据合并为一个DataFrame
-
-data  =  pd.DataFrame({'Student Name': student_names, 'Class Name': class_names})
-
-  
-
-# 使用value_counts方法统计每个班级的学生数量，按班级名称进行自然排序
-
-class_counts  =  data['Class Name'].value_counts().reindex(natsorted(data['Class Name'].unique()))
-
-  
-
-# 绘制排序后的条形图
-
-class_counts.plot(kind='bar', rot=0, color='skyblue')
-
-plt.xlabel('Class Name')
-
-plt.ylabel('Number of Students')
-
-plt.title('Number of Students in Each Class (Natural Sort)')
-
-plt.show()
