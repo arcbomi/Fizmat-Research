@@ -24,8 +24,9 @@ We will mainly do something like analysis and predictions.
 Here we will show how we obtain the data and how to process it
 ## How we obtained the data
 The data we mainly obtain from kundelik.kz , As you see I will show our acquisition method below.
-*Please use this command to install the python package first*
 
+*Please use this command to install the python package first*
+```
 python -m pip install --upgrade pip
 pip install urllib3
 pip install requests
@@ -34,11 +35,11 @@ pip install openpyxl
 pip install matplotlib
 pip install natsort
 pip install scikit-learn
-
+```
 
 It is a code for downloading a file：
 
-
+```
 import os
 import threading
 import requests
@@ -88,12 +89,12 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+```
 
 
 This code is used to process downloaded files and add them to excel for storage：
 
-
+```
 import os
 import glob
 from bs4 import BeautifulSoup
@@ -156,7 +157,7 @@ for html_file in html_files:
             ws.append([number, userid, grade, birthday])
 
 wb.save(excel_save_path)
-
+```
 
 This is all the process used for us to download and process the data.
 ## further analysis
