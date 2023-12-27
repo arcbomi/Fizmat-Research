@@ -8,12 +8,14 @@ import matplotlib.pyplot as plt
 ```
 Here, we import the **pandas** library for working with DataFrames
 and **matplotlib.pyplot** library for creating plots.
+
 # 2.Load Data from csv file:
 ```
 file_path = 'student.csv'
 df_people = pd.read_csv(file_path)
 ```
 We use **pd.read_csv** to load data from a *CSV* file into a DataFrame.
+
 # 3.Create a Chart for Names:
 ```
 plt.figure(figsize=(155, 6))
@@ -141,23 +143,28 @@ Summary:
 
 1. **Import Libraries:**
 
-The code imports the necessary libraries: Pandas for data manipulation and Matplotlib for creating visualizations.
+* The code imports the necessary libraries: Pandas for data manipulation and Matplotlib for creating visualizations.
+
 2. **Read CSV Data:**
 
-Reads data from a CSV file named 'student.csv' into a Pandas DataFrame named 'df'.
+* Reads data from a CSV file named 'student.csv' into a Pandas DataFrame named 'df'.
+
 3. **Data Cleaning:**
 
 * Fills missing values in the 'Name' column with the string '9'.
 * Removes rows where the 'Name' column is equal to '9'.
 * Converts the 'Month' column to numeric values, replacing non-numeric values with NaN.
 * Drops rows with missing values in the 'Month' column.
-4. Feature Engineering:
+
+4. **Feature Engineering:**
 * Creates a new column 'FirstLetter' containing the first letter of each name.
+
 5. **Data Visualization:**
 
 * Plots a scatter plot with 'FirstLetter' on the x-axis and 'Month' on the y-axis.
 * Sets plot title, x-axis label, y-axis label.
 * Sets y-axis ticks to range from 1 to 12.
+
 6. **Display Plot:**
 * Finally, displays the created scatter plot.
 
