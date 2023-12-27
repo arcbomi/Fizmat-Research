@@ -151,14 +151,14 @@ Reads data from a CSV file named 'student.csv' into a Pandas DataFrame named 'df
 * Removes rows where the 'Name' column is equal to '9'.
 * Converts the 'Month' column to numeric values, replacing non-numeric values with NaN.
 * Drops rows with missing values in the 'Month' column.
-Feature Engineering:
+4. Feature Engineering:
 * Creates a new column 'FirstLetter' containing the first letter of each name.
-3. **Data Visualization:**
+5. **Data Visualization:**
 
 * Plots a scatter plot with 'FirstLetter' on the x-axis and 'Month' on the y-axis.
 * Sets plot title, x-axis label, y-axis label.
-Sets y-axis ticks to range from 1 to 12.
-4. **Display Plot:**
+* Sets y-axis ticks to range from 1 to 12.
+6. **Display Plot:**
 * Finally, displays the created scatter plot.
 
 The code seems to visualize the relationship between the first letter of names and the corresponding months, potentially exploring if there is any pattern or trend.
